@@ -7,13 +7,17 @@
 <section id="page-header">
 	<h1>{{ project.name }}</h1>
 	<p class="lead">{{ project.ptype }} by Sebastien Galina tagged in: {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+
+	<p>
+		{{ project.short }}
+	</p>
 </section>
 
 
 {% for block in project.blocks.all %}
 <div class="project-block">
 	<div class="grid">
-		<div class="col-3of12 block-text">
+		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>{{ block.heading }}</h2>
 				<p class="lead">{{ block.tagline }}</p>
@@ -21,7 +25,7 @@
 				<!--<hr class="annotation-line">-->
 			</div>
 		</div>
-		<div class="col-9of12 block-content">
+		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 			{% thumbnail block.image "700" upscale=false as im %}
 				<figure>

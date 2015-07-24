@@ -1,0 +1,7 @@
+Iterate on the banner image at top
+Remove thin line around project snippet
+Move the tools to a different spot (it gets scrolled past)
+Add tools to project detail page?
+Iterate on the art direction spheres, maybe show process in a different way.
+
+Mobile site!!!

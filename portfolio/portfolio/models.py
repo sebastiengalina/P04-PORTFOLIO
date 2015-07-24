@@ -47,6 +47,7 @@ class ProjectBlock(models.Model):
     tagline = models.CharField(max_length=255, blank=True, null=True)
     body = models.TextField(blank=True, null=True)
     image = ImageField(upload_to="media/portfolio/projects/images", blank=True, null=True)
+    caption = models.TextField(blank=True, null=True)
     order = models.IntegerField(default=10)
 
     def __unicode__(self):

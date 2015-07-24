@@ -118,6 +118,17 @@ ul.list li, ol.list li {
 	font-weight: bold;
 }
 
+.btn.btn-rev {
+	background-color: $orange;
+	color: $black;
+}
+
+.btn.btn-rev:hover {
+	background-color: transparent;
+	border-color: $orange;
+	color: $orange;
+}
+
 .btn.btn-lg {
 	font-size: 1.75em;
 	font-weight: normal;
@@ -185,6 +196,7 @@ img {
 	display: block;
 	margin: 3rem 0;
 	max-width: 100%;
+	height: auto;
 }
 
 
@@ -223,6 +235,8 @@ img {
 	background-color: #FFF;
 	padding-top: 1rem;
 	z-index: 99;
+
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 }
 
 .header-image {
@@ -254,6 +268,7 @@ img {
 #footer-main {
 	padding: 1em 0;
 	background-color: #EEE;
+	border-top: thin #DDD solid;
 }
 
 .project-block {
@@ -281,8 +296,6 @@ img {
 
 	.project-snippet {
 		background-color: #FFF;
-		border: thin #EEE solid;
-		border-radius: 0.2em;
 		margin: 0.5em;
 		margin-bottom: 2em;
 
@@ -310,15 +323,6 @@ img {
 		.btn {
 			margin: 0.5em;
 		}
-
-		&:hover {
-			background-color: $yellow;
-			border-color: $yellow;
-
-			a, p {
-				color: $black;
-			}
-		}
 	}
 }
 
@@ -345,12 +349,14 @@ img {
 
 
 .project-block {
+	margin-bottom: 0;
 }
 
-.project-block .block-text,
-.column-text {
-	border-right: 3px #EEE solid;
+.project-block .block-content {
+	border-left: 3px #EEE solid;
+	background-color: #F7F7F7;
 }
+
 
 .project-block-text,
 .project-block-content,
@@ -374,6 +380,10 @@ img {
 
 .project-block-content {
 	text-align: center;
+
+	h2, h3, h4, p {
+		text-align: left;
+	}
 }
 
 .project-block-content figure {

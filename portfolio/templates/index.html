@@ -11,7 +11,7 @@
 	<div class="header-feature">
 		<h2>Web Designer, Backend Developer and Digital Art Director</h2>
 		<p class="lead">Find out more about my dedicated practice in standards-based design, robust database management and industrial yet delicate style.</p>
-		<a class="btn btn-lg" href="#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
+		<a class="btn btn-lg btn-rev" href="#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
 	</div>
 </div>
 {% endblock header %}
@@ -20,6 +20,7 @@
 <header id="page-header">
 	<h1>Sebastien Galina</h1>
 	<p class="lead">Web Designer, Backend Developer, and Digital Art Director</p>
+	<p>I work with tools like HTML5, CSS3, Django, Python, Apache, and JQuery.  My job is first and foremost to make sure websites are navigable, useable, and accessible.  But also, to make them responsive and engaging for users.</p>
 </header>
 
 <div id="project-snippets" class="project-snippets">
@@ -40,7 +41,7 @@
 					</div>
 				</a>
 				<p class="lead">{{ p.short|truncatewords:20 }}</p>
-				<a class="btn btn-alt" href="{{ p.get_absolute_url }}">{{ p.readmore }} <span class="fa fa-long-arrow-right"></span></a>
+				<a class="btn" href="{{ p.get_absolute_url }}">{{ p.readmore }} <span class="fa fa-long-arrow-right"></span></a>
 			</div>
 		</div>
 		{% endfor %}

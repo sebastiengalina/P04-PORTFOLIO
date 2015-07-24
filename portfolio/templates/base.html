@@ -1,0 +1,69 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en-CA">
+
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}Sebastien Galina{% endblock title %}</title>
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
+		<link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+		<script src="{% static 'js/holder.min.js' %}"></script>
+	</head>
+
+	<body>
+		<header id="header-main" role="header">
+			{% block header %}
+			<div id="menu">
+				<div class="grid">
+					<div class="col-8of12">
+						<h2 class="brand"><a href="{% url 'index' %}">Galina</a></h2>
+					</div>
+					<div class="col-4of12">
+						<div class="grid button-grid">
+							<div class="col-4of12">
+								<a class="btn btn-alt" href="{% url 'index' %}#project-snippets">My Work</a>
+							</div>
+							<div class="col-4of12">
+								<a class="btn btn-alt" href="{% url 'about' %}">My Story</a>
+							</div>
+							<div class="col-4of12">
+								<a class="btn btn-alt" href="{% url 'index' %}#footer-main">Contact Me</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endblock header %}
+		</header>
+
+		<div id="wrap">
+		{% block body.content %}
+		{% endblock body.content %}
+		</div>
+
+		<footer id="footer-main" role="footer">
+			{% block footer %}
+			<div class="grid">
+				<div class="col-4of12">
+					<h2>Contact Me</h2>
+					<p>Let's chat about anything from consulting your brand, to online presence, and design.</p>
+					<p><a href="mailto:sebastien@boldly.ca">sebastien@boldly.ca</a> (email)</p>
+					<p><a href="http://twitter.com/sebig">@sebig</a> (twitter)</p>
+					<div class="grid">
+					</div>
+				</div>
+				<div class="col-8of12">
+				</div>
+			</div>
+			{% endblock footer %}
+		</footer>
+
+		<script src="{% static 'js/html5shiv.min.js' %}"></script>
+		<script src="{% static 'js/googlefonts.js' %}"></script>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+	</body>
+
+</html>

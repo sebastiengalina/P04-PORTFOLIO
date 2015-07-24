@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body.content %}
+{% block twocolumn.header %}
+Two Column Header
+{% endblock twocolumn.header %}
+<div class="twocolumn-wrap">
+	<div class="grid">
+		<div class="col-3of12">
+			<aside role="sidebar">
+				{% block body.content.sidebar %}
+				{% endblock body.content.sidebar %}
+			</aside>
+		</div>
+		<div class="col-9of12">
+			<main role="main">
+				{% block body.content.main %}
+				{% endblock body.content.main %}
+			</main>
+		</div>
+	</div>
+</div>
+{% endblock body.content %}

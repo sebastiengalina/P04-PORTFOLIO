@@ -1,0 +1,17 @@
+{% extends "base_twocolumn.html" %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+{% block twocolumn.header %}
+<header id="page-header">
+	<h1>Sebastien Galina</h1>
+	<p class="lead">Web Designer, Backend Developer, and Digital Art Director</p>
+</header>
+{% endblock twocolumn.header %}
+
+{% block body.content.sidebar %}
+{% endblock body.content.sidebar %}
+
+{% block body.content.main %}
+{{ flatpage.content }}
+{% endblock body.content.main %}

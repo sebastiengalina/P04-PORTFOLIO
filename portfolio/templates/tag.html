@@ -1,0 +1,44 @@
+{% extends "base_onecolumn.html" %}
+{% load thumbnail %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+{% block body.content.main %}
+<header id="page-header">
+	<h1>{{ tag|capfirst }} Projects</h1>
+	<p class="lead">Hopefully you find the one you desire!</p>
+</header>
+
+{% for project in projects %}
+<div class="project-block">
+	<div class="grid">
+		<div class="col-3of12 block-text">
+			<div class="project-block-text">
+				<h2>{{ project.name }}</h2>
+				<p>{{ project.short }}</p>
+				<a href="{{ project.get_absolute_url }}">{{ project.readmore }} <span class="fa fa-long-arrow-right"></span></a>
+			</div>
+		</div>
+		<div class="col-9of12 block-content">
+			<div class="project-block-content">
+				<h2 class="whisper">{{ project.date.year }}</h2>
+				<p class="lead">Also tagged in {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+				<div class="grid">
+					<div class="col-6of12">
+						{% thumbnail project.logo "400x300" format="PNG" as im %}
+						<img class="bordered" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ project.name }} logo">
+						{% endthumbnail %}
+					</div>
+					<div class="col-6of12">
+						{% thumbnail project.image "400x300" format="PNG" as im %}
+						<img class="bordered" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ project.name }} image">
+						{% endthumbnail %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endfor %}
+
+{% endblock body.content.main %}

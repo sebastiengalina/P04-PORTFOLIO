@@ -9,20 +9,14 @@
 	{{ block.super }}
 	<img class="header-image" src="{% static 'img/seb-01.jpg' %}" alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
 	<div class="header-feature">
-		<h2>Web Designer, Backend Developer and Digital Art Director</h2>
-		<p class="lead">Find out more about my dedicated practice in standards-based design, robust database management and industrial yet delicate style.</p>
-		<a class="btn btn-lg btn-rev" href="#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
+		<h2>Sebastien Galina</h2>
+		<p class="lead">Web Designer, Backend Developer and Digital Art Director</p>
+		<a class="btn btn-lg btn-rev" href="#project-snippets">Check out my work <span class="fa fa-long-arrow-right"></span></a>
 	</div>
 </div>
 {% endblock header %}
 
 {% block body.content.main %}
-<header id="page-header">
-	<h1>Sebastien Galina</h1>
-	<p class="lead">Web Designer, Backend Developer, and Digital Art Director</p>
-	<p>I work with tools like HTML5, CSS3, Django, Python, Apache, and JQuery.  My job is first and foremost to make sure websites are navigable, useable, and accessible.  But also, to make them responsive and engaging for users.</p>
-</header>
-
 <div id="project-snippets" class="project-snippets">
 	<div class="grid">
 		{% for p in projects|slice:":2" %}

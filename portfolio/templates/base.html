@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
 		<link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+		<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon"/>
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon"/>
 		<script src="{% static 'js/holder.min.js' %}"></script>
 	</head>
 
@@ -22,15 +24,18 @@
 						<h2 class="brand"><a href="{% url 'index' %}">Galina</a></h2>
 					</div>
 					<div class="col-4of12">
-						<div class="grid button-grid">
-							<div class="col-4of12">
-								<a class="btn btn-alt" href="{% url 'index' %}#project-snippets">My Work</a>
-							</div>
-							<div class="col-4of12">
-								<a class="btn btn-alt" href="{% url 'about' %}">My Story</a>
-							</div>
-							<div class="col-4of12">
-								<a class="btn btn-alt" href="{% url 'index' %}#footer-main">Contact Me</a>
+						<div class="button-grid">
+							<span class="dropdown-toggle"><span class="fa fa-caret-down"></span> MENU</span>
+							<div class="grid">
+								<div class="col-4of12">
+									<a class="btn btn-alt" href="{% url 'index' %}#project-snippets">My Work</a>
+								</div>
+								<div class="col-4of12">
+									<a class="btn btn-alt" href="{% url 'about' %}">My Story</a>
+								</div>
+								<div class="col-4of12">
+									<a class="btn btn-alt contact-toggle" href="{% url 'index' %}#footer-main">Contact Me</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -65,6 +70,9 @@
 		<script src="{% static 'js/googlefonts.js' %}"></script>
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/scroll-link.js' %}"></script>
+		<script src="{% static 'js/dropdown.js' %}"></script>
+		<script src="{% static 'js/contact.js' %}"></script>
+
 	</body>
 
 </html>

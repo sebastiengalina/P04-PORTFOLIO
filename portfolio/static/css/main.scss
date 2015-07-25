@@ -3,12 +3,14 @@
 	by Sebastien Galina
 */
 
+$red: #FF3300;
 $yellow: #FFFF00;
 $orange: #CCCC00;
 $black: #333;
 $grey: #888;
 $lightgrey: #666;
 $lightergrey: #CCC;
+$lightestgrey: #EEE;
 
 
 *,*::after,*::before {
@@ -113,20 +115,21 @@ ul.list li, ol.list li {
 	display: inline-block;
 	*display: inline;
 	padding: 0.5em 1em;
-	border: thin $orange solid;
+	border: 0.15em $orange solid;
 	border-radius: 0.25em;
 	font-weight: bold;
 }
 
 .btn.btn-rev {
-	background-color: $orange;
+	background-color: $yellow;
+	border-color: $yellow;
 	color: $black;
 }
 
 .btn.btn-rev:hover {
 	background-color: transparent;
-	border-color: $orange;
-	color: $orange;
+	border-color: $yellow;
+	color: $yellow;
 }
 
 .btn.btn-lg {
@@ -136,13 +139,19 @@ ul.list li, ol.list li {
 
 .btn.btn-alt {
 	color: $lightgrey;
-	border-color: $lightgrey;
+	border-color: $lightestgrey;
 }
 
 .btn.btn-alt:hover {
 	background-color: $lightergrey;
 	border-color: $lightergrey;
 	color: $black;
+}
+
+.btn.btn-alt.btn-love:hover {
+	background-color: $red;
+	border-color: $red;
+	color: darken($red, 25);
 }
 
 .btn.btn-nav {
@@ -239,9 +248,34 @@ img {
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 }
 
+#menu .dropdown-toggle {
+	padding: 0.5em 1em;
+	background-color: $lightestgrey;
+	border-radius: 0.25em;
+	display: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#menu .button-grid .grid {
+	padding: 0;
+}
+
+#menu .button-grid .grid.active {
+	visibility: visible;
+}
+
+.header-well {
+	position: relative;
+	overflow: hidden;
+}
+
 .header-image {
 	margin: 0 auto;
 	padding-top: 4em;
+	border-bottom: 1rem $yellow solid;
 }
 
 .header-feature {
@@ -249,7 +283,7 @@ img {
 	padding: 1em;
 	width: 50%;
 	margin: 0 auto;
-	top: 35%;
+	top: 32%;
 	right: 0;
 
 	h2, p {
@@ -269,6 +303,12 @@ img {
 	padding: 1em 0;
 	background-color: #EEE;
 	border-top: thin #DDD solid;
+	transition: all 3s ease-out 3s;
+
+	&.active {
+		background-color: lighten($orange, 20);
+		transition: all 0.25s ease-out 0.5s;
+	}
 }
 
 .project-block {
@@ -291,7 +331,7 @@ img {
 
 /* ----------------------- PROJECT STYLES ------------------------- */
 .project-snippets {
-	margin: 4em auto;
+	margin: 2em auto;
 	max-width: 80em;
 
 	.project-snippet {
@@ -367,6 +407,7 @@ img {
 
 .project-block-text {
 	position: relative;
+	padding-right: 3rem;
 	.annotation-line {
 		border-width: 0.25em;
 		border-radius: 1em;
@@ -393,4 +434,14 @@ img {
 
 .project-block-content .bordered {
 	border: thin #EEE solid;
+}
+
+.project-love {
+	padding: 1rem;
+	max-width: 30em;
+	margin: 0 auto;
+	border-radius: 0.5em;
+	background-color: #F7F7F7;
+	text-align: center;
+
 }

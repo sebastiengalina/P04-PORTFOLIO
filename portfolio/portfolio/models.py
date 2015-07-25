@@ -7,6 +7,11 @@ from django.core.urlresolvers import reverse_lazy as reverse
 from sorl.thumbnail import ImageField
 
 
+class ProjectManager(models.Manager):
+    def active(self):
+        return self.get_query_set().filter(is_hidden=False)
+
+
 ## ----------------------------------------------------------------------------
 ## PORTFOLIO PROJECT
 ## ----------------------------------------------------------------------------
@@ -26,6 +31,10 @@ class Project(models.Model):
     short = models.TextField(verbose_name=_("Short description"))
     readmore = models.CharField(verbose_name=_("Read more link text"), max_length=64)
     tags = models.ManyToManyField("Tag", blank=True)
+
+    is_hidden = models.BooleanField(default=False)
+
+    objects = ProjectManager()
 
     def __unicode__(self):
         return self.name

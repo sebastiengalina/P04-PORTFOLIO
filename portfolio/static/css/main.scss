@@ -187,8 +187,6 @@ figure {
 	padding: 0;
 	margin: 3rem auto;
 	display: inline-block;
-	border: thin #EEE solid;
-	border-bottom: none;
 }
 
 figure img {
@@ -332,11 +330,34 @@ img {
 	padding: 1em 0;
 	background-color: #EEE;
 	border-top: thin #DDD solid;
-	transition: all 1s ease-out 1s;
+	-webkit-transition: all 1s ease-out 1s;
+	   -moz-transition: all 1s ease-out 1s;
+	    -ms-transition: all 1s ease-out 1s;
+	        transition: all 1s ease-out 1s;
+
+	p {
+		-webkit-transition: all 1s ease-out 1s;
+		   -moz-transition: all 1s ease-out 1s;
+		    -ms-transition: all 1s ease-out 1s;
+		        transition: all 1s ease-out 1s;
+	}
 
 	&.active {
+		border-color: $yellow;
+		color: darken($orange, 30) !important;
 		background-color: lighten($orange, 20);
-		transition: all 0.25s ease-out 0.5s;
+		-webkit-transition: all 0.25s ease-out 0.5s;
+		   -moz-transition: all 0.25s ease-out 0.5s;
+	 	    -ms-transition: all 0.25s ease-out 0.5s;
+		        transition: all 0.25s ease-out 0.5s;
+
+		p {
+			color: darken($orange, 30) !important;
+		    -webkit-transition: all 0.25s ease-out 0.5s;
+		       -moz-transition: all 0.25s ease-out 0.5s;
+	 	        -ms-transition: all 0.25s ease-out 0.5s;
+			        transition: all 0.25s ease-out 0.5s;
+		}
 	}
 }
 

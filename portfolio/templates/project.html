@@ -31,7 +31,7 @@
 				<figure>
 					<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
 					{% if block.caption %}
-					<figcaption>Caption</figcaption>
+					<figcaption>{{ block.caption }}</figcaption>
 					{% endif %}
 				</figure>
 			{% endthumbnail %}

@@ -1,4 +1,5 @@
 {% extends "base_onecolumn.html" %}
+{% load staticfiles %}
 
 {% block title %}{{ flatpage.title }}{% endblock title %}
 
@@ -16,12 +17,16 @@
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>Education</h2>
-				<p>I graduated from <a href="http://sfu.ca">Simon Fraser University</a> with a BSc in Computing Science.</p>
+				<p>I graduated from <a href="http://sfu.ca">Simon Fraser University</a> with a BSc in Computing Science, but in addition to having learned the ins and outs of software development, artificial intelligence and TCP/IP networking hardware, I studied graphic design and web design principles in SIAT, the School of Interactive Arts and Technology at SFU.</p>
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 				<h2 class="whisper">2015</h2>
+				<figure>
+					<img src="{% static 'img/baristacats-01.png' %}" alt="Graphic design and art direction for fictional coffee company" width="1200" height="800">
+					<figcaption>Art direction for fictional coffee house Baristacats</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>
@@ -32,12 +37,16 @@
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>Boldly Creative Agency</h2>
-				<p>I started a <a href="http://boldly.ca">creative agency</a> with two business partners; we've shot commercials and projects for A&amp;W, Deloitte, Playland and Coast Capital.</p>
+				<p>I started a <a href="http://boldly.ca">creative agency</a> with two business partners; we've shot commercials and projects for A&amp;W, Deloitte, Playland and Coast Capital.  We go beyond the traditional production company by offering creative campaigns for small to medium sized businesses, which includes branding, photography, commercials and web.</p>
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 				<h2 class="whisper">2015</h2>
+				<figure>
+					<img src="{% static 'img/boldly-01.jpg' %}" width="800" height="378" alt="Boldly Creative Agency on set for Felix Cartal's Something To Live For">
+					<figcaption>Boldly Creative Agency, Inc. on set for Felix Cartal's music video with Nikki Yannofsky</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>
@@ -48,12 +57,16 @@
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>Exposure Contest</h2>
-				<p>I built a website to host a <a href="http://exposure-contest.ca">video editing contest</a>.  We garnered over 40k views, had over 280 participants sign up from all over the world.</p>
+				<p>I built a website to host a <a href="http://exposure-contest.ca">video editing contest</a>.  We garnered over 40k views, had over 280 participants sign up from all over the world.  After shooting a music video in Vancouver, we uploaded the HD footage online and gave it away for free.  Those who chose to enter our contest won the chance to direct and edit a short film with my team!</p>
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 				<h2 class="whisper">2013</h2>
+				<figure>
+					<img src="{% static 'img/exposure-01.png' %}" alt="Screenshot of Exposure Contest competitors page" width="800" height="378">
+					<figcaption>Screenshot from the Exposure Contest competitors, from the website I built with Django.</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>
@@ -64,12 +77,16 @@
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>Prime Focus VFX</h2>
-				<p>I worked as a software developer (co-op) in the VFX hub of Vancouver, BC.  I built desktop programs with Python and PyQT to assist the artist floor and company infrastructure.</p>
+				<p>I worked as a software developer (co-op) in the VFX hub of Vancouver, BC.  I built desktop programs with Python and PyQT to assist the artist floor and company infrastructure.  During my time there, I learned a lot about colour theory, enterprise level software distribution, and contributed to an ever-evolving set of production software tools and databases.</p>
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 				<h2 class="whisper">2012</h2>
+				<figure>
+					<img src="{% static 'img/pfw-01.jpg' %}" alt="Outside the Vancouver Prime Focus VFX offices where I worked for eight months as a software developer" width="1000" height="667">
+					<figcaption>Outside the Vancouver office for Prime Focus VFX where I worked for eight months.</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>
@@ -80,12 +97,16 @@
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
 				<h2>Grass Roots</h2>
-				<p>As a kid I started making short films and designing the look and feel of my work products in school.</p>
+				<p>As a kid I started making short films and designing the look and feel of my work products in school.  I started by directing short films with the use of LEGO bricks, and later moved on to writing music, live action films, programming, and web development.  I used these formative years to explore as many creative avenues as I could to truly find what I was passionate about.</p>
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
-				<h2 class="whisper">2003</h2>
+				<h2 class="whisper">2006</h2>
+				<figure>
+					<img src="{% static 'img/chasse-02.png' %}" alt="Stills from La Chasse Galerie, a short film I made in French class" width="800" height="533">
+					<figcaption>Stills from an old LEGO movie I made in French class</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>

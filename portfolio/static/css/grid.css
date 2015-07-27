@@ -79,7 +79,6 @@
 	.header-feature .btn.btn-lg {
 		font-size: 100%;
 	}
-
 	#menu .button-grid {
 		text-align: right;
 	}
@@ -94,8 +93,10 @@
 	}
 	#menu .dropdown-toggle {
 		display: inline-block;
+		margin-top: 0.15em;
 	}
 	#menu .button-grid .grid {
+		opacity: 0;
 		background-color: #FFF;
 		position: absolute;
 		z-index: 99;
@@ -103,6 +104,10 @@
 		top: 3.45em;
 
 		visibility: hidden;
+	}
+
+	.project-block .col-6of12 {
+		width: 100%;
 	}
 }
 

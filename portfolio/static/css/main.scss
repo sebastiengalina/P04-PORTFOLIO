@@ -225,7 +225,6 @@ img {
 		padding: 0 1rem;
 		padding-bottom: 1rem;
 		position: relative;
-		z-index: 99;
 	}
 
 	.button-grid {
@@ -236,6 +235,8 @@ img {
 
 #header-main {
 	padding: 0;
+	position: relative;
+	z-index: 999;
 }
 
 #menu {
@@ -243,7 +244,7 @@ img {
 	position: fixed;
 	background-color: #FFF;
 	padding-top: 1rem;
-	z-index: 99;
+	z-index: 999;
 
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 }
@@ -254,17 +255,48 @@ img {
 	border-radius: 0.25em;
 	display: none;
 
+	-webkit-transition: all 0.25s ease-out;
+	   -moz-transition: all 0.25s ease-out;
+	    -ms-transition: all 0.25s ease-out;
+	        transition: all 0.25s ease-out;
+
 	&:hover {
 		cursor: pointer;
+		background-color: lighten($orange, 10);
+		color: $black;
 	}
 }
 
 #menu .button-grid .grid {
 	padding: 0;
+	width: 100%;
+
+	-webkit-transition: all 0.25s ease-out;
+	   -moz-transition: all 0.25s ease-out;
+	    -ms-transition: all 0.25s ease-out;
+	        transition: all 0.25s ease-out;
+
+	.btn .fa {
+		display: none;
+	}
 }
 
 #menu .button-grid .grid.active {
 	visibility: visible;
+	opacity: 1;
+
+	background-color: lighten($orange, 10);
+	background-color: rgba(lighten($orange, 10), 0.95);
+	color: $black;
+
+	.btn {
+		font-size: 2em;
+		padding-right: 0.5em;
+
+		.fa {
+			display: inline-block;
+		}
+	}
 }
 
 .header-well {
@@ -276,6 +308,7 @@ img {
 	margin: 0 auto;
 	padding-top: 4em;
 	border-bottom: 1rem $yellow solid;
+	opacity: 0.75;
 }
 
 .header-feature {
@@ -285,10 +318,6 @@ img {
 	margin: 0 auto;
 	top: 32%;
 	right: 0;
-
-	h2, p {
-		color: #FFF;
-	}
 
 	.btn {
 		margin-top: 1em;
@@ -303,7 +332,7 @@ img {
 	padding: 1em 0;
 	background-color: #EEE;
 	border-top: thin #DDD solid;
-	transition: all 3s ease-out 3s;
+	transition: all 1s ease-out 1s;
 
 	&.active {
 		background-color: lighten($orange, 20);
@@ -345,6 +374,7 @@ img {
 		        transition: all 0.25s ease-out;
 
 		img {
+			border: thin #EEE solid;
 			margin: 0.5rem auto;
 			height: auto;
 		}

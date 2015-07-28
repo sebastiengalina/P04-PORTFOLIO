@@ -26,10 +26,10 @@
 				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 				<a class="simple-link" href="{{ p.get_absolute_url }}" title="{{ p.name }}">
 					<div class="layers">
-						{% thumbnail p.logo "800x450" crop="center" format="PNG" as im %}
+						{% thumbnail p.logo "800x450" crop="top" format="PNG" as im %}
 						<img class="top-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} logo">
 						{% endthumbnail %}
-						{% thumbnail p.image "800x450" crop="center" format="PNG" as im %}
+						{% thumbnail p.image "800x450" crop="top" format="PNG" as im %}
 						<img class="bottom-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} style">
 						{% endthumbnail %}
 					</div>

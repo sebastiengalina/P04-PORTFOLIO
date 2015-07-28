@@ -78,7 +78,7 @@ hr.alt {
 
 a {
 	color: $orange;
-	padding: 0 0.2em;
+	padding: 0 0.1em;
 	text-decoration: none;
 	border-bottom: 0.15em $black solid;
 
@@ -92,6 +92,10 @@ a:hover {
 	color: $black;
 	background-color: $yellow;
 	border-color: transparent;
+}
+
+p a {
+	border-color: $lightergrey;
 }
 
 a.simple-link {
@@ -206,6 +210,19 @@ img {
 	height: auto;
 }
 
+
+.alert {
+	border: 0.15em transparent solid;
+	
+}
+
+.alert-liked {
+	background-color: $red;
+	padding: 0 1rem;
+	p {
+		color: darken($red, 20);
+	}
+}
 
 
 /* ----------------------- COMBINED STYLES ------------------------ */

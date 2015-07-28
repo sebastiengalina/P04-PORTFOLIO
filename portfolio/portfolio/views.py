@@ -1,5 +1,6 @@
 # Django
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.template import loader, RequestContext
 from django.shortcuts import get_object_or_404
 
@@ -18,7 +19,14 @@ def index(request):
 
 def project(request, slug):
     p = get_object_or_404(Project, slug__exact=slug)
-    data = {"project": p}
+
+    data = {}
+    if request.GET.get("like"):
+        p.likes += 1
+        p.save()
+        data.update({"liked": True})
+
+    data.update({"project": p})
     t = loader.get_template("project.html")
     c = RequestContext(request, data)
     return HttpResponse(t.render(c))

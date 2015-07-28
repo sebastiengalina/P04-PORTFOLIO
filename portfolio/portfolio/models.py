@@ -33,6 +33,7 @@ class Project(models.Model):
     tags = models.ManyToManyField("Tag", blank=True)
 
     is_hidden = models.BooleanField(default=False)
+    likes = models.IntegerField(default=0)
 
     objects = ProjectManager()
 

@@ -5,8 +5,13 @@
 
 {% block body.content.main %}
 <section id="page-header">
+	{% if liked %}
+	<div class="alert alert-liked">
+		<p><span class="fa fa-heart"></span> Thanks for showing some love!</p>
+	</div>
+	{% endif %}
 	<h1>{{ project.name }}</h1>
-	<p class="lead">{{ project.ptype }} by Sebastien Galina for {{ project.client }} tagged in: {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+	<p class="lead">{{ project.ptype }} by Sebastien Galina for {{ project.client }}<br>Tagged in: {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 
 	<p>
 		{{ project.short }}
@@ -46,7 +51,7 @@
 {% block footer %}
 <div class="project-love">
 	<h3>Show this project some love!</h3>
-	<a class="btn btn-alt btn-love" href="#"><span class="fa fa-heart"></span> I like this project</a>
+	<a class="btn btn-alt btn-love" href="?like=1"><span class="fa fa-heart"></span> I like this project</a>
 </div>
 {{ block.super }}
 {% endblock footer %}

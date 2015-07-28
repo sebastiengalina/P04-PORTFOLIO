@@ -26,20 +26,28 @@
 			<div class="project-block-text">
 				<h2>{{ block.heading }}</h2>
 				<p class="lead">{{ block.tagline }}</p>
-				<p>{{ block.body|safe|linebreaks }}</p>
+				{{ block.body|safe|linebreaks }}
 				<!--<hr class="annotation-line">-->
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
-			{% thumbnail block.image "700" upscale=false as im %}
 				<figure>
-					<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
+					<picture>
+						{% thumbnail block.image "700" upscale=false as im %}
+						<source media="(min-width:45em)" srcset="{{ im.url }}">
+						{% endthumbnail %}
+						{% thumbnail block.image "400" upscale=false as im %}
+						<source media="(min-width:0em)" srcset="{{ im.url }}">
+						{% endthumbnail %}
+						{% thumbnail block.image "700" upscale=false as im %}
+						<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
+						{% endthumbnail %}
+					</picture>
 					{% if block.caption %}
 					<figcaption>{{ block.caption }}</figcaption>
 					{% endif %}
 				</figure>
-			{% endthumbnail %}
 			</div>
 		</div>
 	</div>

@@ -7,8 +7,14 @@
 {% block header %}
 <div class="header-well">
 	{{ block.super }}
-	<img class="header-image" src="{% static 'img/deloitte-05.png' %}" alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
-	<div class="header-feature">
+	<picture>
+		<source media="(min-width:60em)" srcset="{% static 'img/deloitte-05.png' %}">
+		<source media="(min-width:45em)" srcset="{% static 'img/deloitte-05-med.png' %}">
+		<source media="(min-width: 0em)" srcset="{% static 'img/deloitte-05-small.png' %}">
+		<img class="header-image" src="{% static 'img/deloitte-05.png' %}"
+			alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
+	</picture>
+	<div class="header-feature" role="heading">
 		<h2>Sebastien Galina</h2>
 		<p class="lead">Web Designer, Backend Developer and Digital Art Director</p>
 		<a class="btn btn-lg btn-rev" href="#project-snippets">Check out my work <span class="fa fa-long-arrow-right"></span></a>
@@ -26,12 +32,28 @@
 				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 				<a class="simple-link" href="{{ p.get_absolute_url }}" title="{{ p.name }}">
 					<div class="layers">
-						{% thumbnail p.logo "800x450" crop="top" format="PNG" as im %}
-						<img class="top-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} logo">
-						{% endthumbnail %}
-						{% thumbnail p.image "800x450" crop="top" format="PNG" as im %}
-						<img class="bottom-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} style">
-						{% endthumbnail %}
+						<picture>
+							{% thumbnail p.logo "800x450" crop="top" format="PNG" as im %}
+							<source media="(min-width:45em)" srcset="{{ im.url }}">
+							{% endthumbnail %}
+							{% thumbnail p.logo "400x250" crop="top" format="PNG" as im %}
+							<source media="(min-width:0em)" srcset="{{ im.url }}">
+							{% endthumbnail %}
+							{% thumbnail p.logo "800x450" crop="top" format="PNG" as im %}							
+							<img class="top-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} logo">
+							{% endthumbnail %}
+						</picture>
+						<picture>
+							{% thumbnail p.image "800x450" crop="top" format="PNG" as im %}
+							<source media="(min-width:45em)" srcset="{{ im.url }}">
+							{% endthumbnail %}
+							{% thumbnail p.image "400x250" crop="top" format="PNG" as im %}
+							<source media="(min-width:0em)" srcset="{{ im.url }}">
+							{% endthumbnail %}
+							{% thumbnail p.image "800x450" crop="top" format="PNG" as im %}							
+							<img class="bottom-layer" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ p.name }} style">
+							{% endthumbnail %}
+						</picture>
 					</div>
 				</a>
 				<p class="lead">{{ p.short|truncatewords:20 }}</p>

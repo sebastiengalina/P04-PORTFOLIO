@@ -501,7 +501,16 @@ img {
 }
 
 .project-block-content .bordered {
-	border: thin #EEE solid;
+	border: 0.15em #EEE solid;
+}
+
+.project-block-content .tagged-grid {
+	img {
+		margin-bottom: 1rem;
+	}
+	.col-3of12 img {
+		margin-top: 0;
+	}
 }
 
 .project-love {

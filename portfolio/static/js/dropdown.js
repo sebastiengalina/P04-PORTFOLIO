@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$("#menu .button-grid .grid").toggleClass("active");
 	});
 
-	$("#wrap").click(function() {
+	$("#wrap, #footer-main, #menu .button-grid .btn").click(function() {
 		$("#menu .button-grid .grid").removeClass("active");
 	});
 });

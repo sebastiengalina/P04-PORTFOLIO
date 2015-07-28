@@ -15,25 +15,25 @@
 	</head>
 
 	<body>
-		<header id="header-main" role="header">
+		<header id="header-main">
 			{% block header %}
-			<div id="menu">
+			<div id="menu" role="navigation">
 				<div class="grid">
 					<div class="col-8of12">
 						<h2 class="brand"><a href="{% url 'index' %}">Galina</a></h2>
 					</div>
 					<div class="col-4of12">
-						<div class="button-grid">
+						<div class="button-grid" role="menu">
 							<span class="dropdown-toggle"><span class="fa fa-caret-down"></span> MENU</span>
 							<div class="grid">
 								<div class="col-4of12">
-									<a class="btn btn-alt" href="{% url 'index' %}#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
+									<a class="btn btn-alt" role="menuitem" href="{% url 'index' %}#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 								<div class="col-4of12">
-									<a class="btn btn-alt" href="{% url 'about' %}">My Story <span class="fa fa-long-arrow-right"></span></a>
+									<a class="btn btn-alt" role="menuitem" href="{% url 'about' %}">My Story <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 								<div class="col-4of12">
-									<a class="btn btn-alt contact-toggle" href="{% url 'index' %}#footer-main">Contact Me <span class="fa fa-long-arrow-right"></span></a>
+									<a class="btn btn-alt contact-toggle" role="menuitem" href="{% url 'index' %}#footer-main">Contact Me <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 		{% endblock body.content %}
 		</div>
 
-		<footer id="footer-main" role="footer">
+		<footer id="footer-main">
 			{% block footer %}
 			<div class="grid">
 				<div class="col-4of12">

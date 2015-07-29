@@ -1,0 +1,365 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P04: Style Guide</title>
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'css/guide.css' %}">
+		<link rel="stylesheet" href="{% static 'fonts/untitled-font-1/untitled-font-1.css' %}">
+		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
+		<script src="{% static 'js/holder.min.js' %}"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<h1>P04 Style Guide</h1>
+			<p class="lead">Sebastien Galina</p>
+			<hr class="alt">
+			<section>
+				<h2>Buttons</h2>
+				<h3>Selector:</h3>
+				<code>.btn, .btn.btn-alt, .btn.btn-nav</code>
+				<h3>Sample code:</h3>
+				<pre><code>&lt;a href="#" class="btn"&gt;A button!&lt;/a&gt;</code></pre>
+				<pre><code>&lt;a href="#" class="btn btn-alt"&gt;An alt button!&lt;/a&gt;</code></pre>
+				<pre><code>&lt;a href="#" class="btn btn-nav"&gt;A nav button!&lt;/a&gt;</code></pre>
+				<h3>Rendered element:</h3>
+				<a href="#" class="btn">A button!</a>
+				<a href="#" class="btn btn-alt">An alt button!</a>
+				<a href="#" class="btn btn-nav">A nav button!</a>
+				<hr>
+
+				<h2>Colours</h2>
+				<div class="grid">
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#CCCC00&fg=#FFF&text=#CCCC00">
+							<p>Dark Orange</p>
+						</div>
+					</div>
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#FFFF00&fg=#333&text=#FFFF00">
+							<p>Bright Orange</p>
+						</div>
+					</div>
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#333&fg=#FFF&text=#333333">
+							<p>Text Dark</p>
+						</div>
+					</div>
+				</div>
+				<div class="grid">
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#AAA&fg=#FFF&text=#AAAAAA">
+							<p>Text Light</p>
+						</div>
+					</div>
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#CCC&fg=#FFF&text=#CCCCCC">
+							<p>Text Lighter</p>
+						</div>
+					</div>
+					<div class="col-4of12">
+						<div class="style-tile">
+							<img src="holder.js/300x200?bg=#FFF&fg=#CCC&text=#FFFFFF">
+							<p>White Backgrounds</p>
+						</div>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Image Treatments</h2>
+				<p>Images should be tightly knit together to form a mosaic.  No borders, no padding.</p>
+				<div class="grid">
+				</div>
+				<hr>
+
+				<h2>Links</h2>
+				<h3>Selector:</h3>
+				<code>a</code>
+				<h3>Sample code:</h3>
+				<pre><code>&lt;a href="#"&gt;A link to some more stuff!&lt;/a&gt;</code></pre>
+				<h3>Rendered element:</h3>
+				<a href="#">A link to some more stuff!</a>
+				<hr>
+
+				<h2>Headings</h2>
+				<h3>Selector:</h3>
+				<code>h1, h2, h3, h4, h5, h6</code>
+				<h3>Sample code:</h3>
+				<pre><code>&lt;h1&gt;Boldly Making Impact&lt;/h1&gt;</code></pre>
+				<pre><code>&lt;h2&gt;Boldly Making Impact&lt;/h2&gt;</code></pre>
+				<pre><code>&lt;h3&gt;Boldly Making Impact&lt;/h3&gt;</code></pre>
+				<pre><code>&lt;h4&gt;Boldly Making Impact&lt;/h4&gt;</code></pre>
+
+				<h3>Rendered element:</h3>
+				<h1>Boldly Making Impact</h1>
+				<h2>Boldly Making Impact</h2>
+				<h3>Boldly Making Impact</h3>
+				<h4>Boldly Making Impact</h4>
+				<hr>
+
+				<h2>Paragraphs</h2>
+				<h3>Selector:</h3>
+				<code>p.lead, p</code>
+				<h3>Sample code:</h3>
+				<pre><code>&lt;p class="lead"&gt;Lorem ipsum dolor sit amet.&lt;/&gt;</code></pre>
+				<pre><code>&lt;p class="lead"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo blanditiis ducimus tempore excepturi nulla ex.&lt;/&gt;</code></pre>
+
+				<h3>Rendered element:</h3>
+				<p class="lead">Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quis hic fugiat sed ipsum omnis accusantium veritatis voluptatum cupiditate? Modi repellat nostrum odit vel optio recusandae, nihil maxime? Asperiores laudantium expedita dignissimos rem voluptatum cum dolorum. Voluptatem facere excepturi at inventore libero obcaecati ipsa fugiat, assumenda incidunt tenetur, amet laudantium?</p>
+				<hr>
+
+				<h2>Figures</h2>
+				<h3>Selector:</h3>
+				<code>figure, figure figcaption, figure img</code>
+				<h3>Sample code:</h3>
+				<pre><code>
+&lt;figure&gt;
+&lt;img src="holder.js/700x300/"&gt;
+&lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, fuga.&lt;/figcaption&gt;
+&lt;/figure&gt;
+				</code></pre>
+				<h3>Rendered element:</h3>
+				<figure>
+					<img src="holder.js/700x300/">
+					<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, fuga.</figcaption>
+				</figure>
+				<hr>
+
+				<h2>Icons</h2>
+				<h3>Selector:</h3>
+				<code>.icon</code>
+				<h3>Sample code:</h3>
+				<pre><code>&lt;span class="icon"&gt;a&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="icon"&gt;b&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="icon"&gt;c&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="icon"&gt;d&lt;/span&gt;</code></pre>
+				<h3>Rendered element:</h3>
+				<table>
+					<tr>
+						<td><span class="icon">a</span></td>
+						<td><span class="icon">b</span></td>
+						<td><span class="icon">c</span></td>
+						<td><span class="icon">d</span></td>
+					</tr>
+					<tr>
+						<td><span class="icon">e</span></td>
+						<td><span class="icon">f</span></td>
+						<td><span class="icon">g</span></td>
+						<td><span class="icon">h</span></td>
+					</tr>
+					<tr>
+						<td><span class="icon">i</span></td>
+						<td><span class="icon">j</span></td>
+						<td><span class="icon">k</span></td>
+						<td><span class="icon">l</span></td>
+					</tr>
+				</table>
+				<hr>
+
+				<h2>Lists</h2>
+				<h3>Selector:</h3>
+				<code>ol.list, ul.list</code>
+				<h3>Sample code:</h3>
+				<pre><code>
+&lt;ol class="list"&gt;
+&lt;li&gt;&lt;a href="http://drivedigital.ca"&gt;Drive Digital&lt;/a&gt; / &lt;a href="careers/drivedigital-jrweb.pdf"&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://taxi.ca"&gt;Taxi&lt;/a&gt; / &lt;a href="careers/taxi-jrart.pdf"&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rethinkcanada.com"&gt;Rethink Communications&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+				</code></pre>
+				<h3>Rendered element:</h3>
+				<ol class="list">
+					<li>Web Designer/Developer: <a href="http://drivedigital.ca">Drive Digital</a> / <a href="careers/drivedigital-jrweb.pdf">PDF</a></li>
+					<li>Junior Art Director: <a href="http://taxi.ca">TAXI</a> / <a href="careers/taxi-jrart.pdf">PDF</a></li>
+					<li>Intern: <a href="http://rethinkcanada.com">Rethink Communications</a> / <a href="careers/rethink-intern.pdf">PDF</a></li>
+				</ol>
+				<hr>
+
+				<h2>Main Navigation</h2>
+				<h3>Selector:</h3>
+				<code>#header-main #menu</code>
+				<h3>Sample code:</h3>
+				<pre><code>
+&lt;header id="header-main"&gt;
+	&lt;div id="menu" role="navigation"&gt;
+		&lt;div class="grid"&gt;
+			&lt;div class="col-8of12"&gt;
+				&lt;h2 class="brand"&gt;&lt;a href="{% url 'index' %}"&gt;Galina&lt;/a&gt;&lt;/h2&gt;
+			&lt;/div&gt;
+			&lt;div class="col-4of12"&gt;
+				&lt;div class="button-grid" role="menu"&gt;
+					&lt;span class="dropdown-toggle"&gt;&lt;span class="fa fa-caret-down"&gt;&lt;/span&gt; MENU&lt;/span&gt;
+					&lt;div class="grid"&gt;
+						&lt;div class="col-4of12"&gt;
+							&lt;a class="btn btn-alt" role="menuitem" href="{% url 'index' %}#project-snippets"&gt;My Work &lt;span class="fa fa-long-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="col-4of12"&gt;
+							&lt;a class="btn btn-alt" role="menuitem" href="{% url 'about' %}"&gt;My Story &lt;span class="fa fa-long-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="col-4of12"&gt;
+							&lt;a class="btn btn-alt contact-toggle" role="menuitem" href="{% url 'index' %}#footer-main"&gt;Contact Me &lt;span class="fa fa-long-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/header&gt;
+				</code></pre>
+				<h3>Rendered element:</h3>
+				<header id="header-main">
+					<div id="menu" role="navigation" style="position: static;">
+						<div class="grid">
+							<div class="col-8of12">
+								<h2 class="brand"><a href="{% url 'index' %}">Galina</a></h2>
+							</div>
+							<div class="col-4of12">
+								<div class="button-grid" role="menu">
+									<span class="dropdown-toggle"><span class="fa fa-caret-down"></span> MENU</span>
+									<div class="grid">
+										<div class="col-4of12">
+											<a class="btn btn-alt" role="menuitem" href="{% url 'index' %}#project-snippets">My Work <span class="fa fa-long-arrow-right"></span></a>
+										</div>
+										<div class="col-4of12">
+											<a class="btn btn-alt" role="menuitem" href="{% url 'about' %}">My Story <span class="fa fa-long-arrow-right"></span></a>
+										</div>
+										<div class="col-4of12">
+											<a class="btn btn-alt contact-toggle" role="menuitem" href="{% url 'index' %}#footer-main">Contact Me <span class="fa fa-long-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<hr>
+
+				<h2>Project Snippet</h2>
+				<h3>Selector:</h3>
+				<code>#project-snippets .project-snippet</code>
+				<h3>Sample code:</h3>
+				<pre><code>
+&lt;div id="project-snippets" class="project-snippets"&gt;
+	&lt;div class="grid"&gt;
+		
+		&lt;div class="col-6of12"&gt;
+			&lt;div class="project-snippet"&gt;
+				&lt;h3&gt;Beach House Theatre&lt;/h3&gt;
+				&lt;p&gt;Tagged in: &lt;a href="/tagged/website/"&gt;Website&lt;/a&gt;, &lt;a href="/tagged/design/"&gt;Design&lt;/a&gt;, &lt;a href="/tagged/theatre/"&gt;Theatre&lt;/a&gt;&lt;/p&gt;
+				&lt;a class="simple-link" href="/projects/beachhousetheatre/" title="Beach House Theatre"&gt;
+					&lt;div class="layers"&gt;
+						&lt;picture&gt;
+							&lt;source media="(min-width:45em)" srcset="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png"&gt;
+							&lt;source media="(min-width:0em)" srcset="/media/cache/92/cb/92cbe295df25800dbbed407a8db88e4d.png"&gt;						
+							&lt;img class="top-layer" src="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png" width="800" height="450" alt="Beach House Theatre logo"&gt;
+						&lt;/picture&gt;
+						&lt;picture&gt;
+							&lt;source media="(min-width:45em)" srcset="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png"&gt;
+							&lt;source media="(min-width:0em)" srcset="/media/cache/e9/73/e9737964ef23ae47a2a075adfae4a403.png"&gt;							
+							&lt;img class="bottom-layer" src="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png" width="800" height="450" alt="Beach House Theatre style"&gt;
+						&lt;/picture&gt;
+					&lt;/div&gt;
+				&lt;/a&gt;
+				&lt;p class="lead"&gt;Achieving user goals and company goals meant a complete rebuild from the ground up. We started with Information Architecture to ...&lt;/p&gt;
+				&lt;a class="btn" href="/projects/beachhousetheatre/"&gt;Go under the stars &lt;span class="fa fa-long-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	
+	&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+				<h3>Rendered element:</h3>
+				<div id="project-snippets" class="project-snippets">
+					<div class="grid">
+						
+						<div class="col-6of12">
+							<div class="project-snippet">
+								<h3>Beach House Theatre</h3>
+								<p>Tagged in: <a href="/tagged/website/">Website</a>, <a href="/tagged/design/">Design</a>, <a href="/tagged/theatre/">Theatre</a></p>
+								<a class="simple-link" href="/projects/beachhousetheatre/" title="Beach House Theatre">
+									<div class="layers">
+										<picture>
+											<source media="(min-width:45em)" srcset="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png">
+											<source media="(min-width:0em)" srcset="/media/cache/92/cb/92cbe295df25800dbbed407a8db88e4d.png">						
+											<img class="top-layer" src="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png" width="800" height="450" alt="Beach House Theatre logo">
+										</picture>
+										<picture>
+											<source media="(min-width:45em)" srcset="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png">
+											<source media="(min-width:0em)" srcset="/media/cache/e9/73/e9737964ef23ae47a2a075adfae4a403.png">							
+											<img class="bottom-layer" src="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png" width="800" height="450" alt="Beach House Theatre style">
+										</picture>
+									</div>
+								</a>
+								<p class="lead">Achieving user goals and company goals meant a complete rebuild from the ground up. We started with Information Architecture to ...</p>
+								<a class="btn" href="/projects/beachhousetheatre/">Go under the stars <span class="fa fa-long-arrow-right"></span></a>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+				<hr>
+
+				<h2>Footer</h2>
+				<h3>Selector:</h3>
+				<code>#footer-main</code>
+				<h3>Sample code:</h3>
+				<pre><code>
+&lt;footer id="footer-main"&gt;
+	&lt;div class="grid"&gt;
+		&lt;div class="col-4of12"&gt;
+			&lt;h2&gt;Contact Me&lt;/h2&gt;
+			&lt;p&gt;Let's chat about anything from consulting your brand, to online presence, and design.&lt;/p&gt;
+			&lt;p&gt;&lt;a href="mailto:sebastien@boldly.ca"&gt;sebastien@boldly.ca&lt;/a&gt; (email)&lt;/p&gt;
+			&lt;p&gt;&lt;a href="http://twitter.com/sebig"&gt;@sebig&lt;/a&gt; (twitter)&lt;/p&gt;
+			&lt;div class="grid"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="col-8of12"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+				</code></pre>
+				<h3>Rendered element:</h3>
+				<footer id="footer-main">
+					<div class="grid">
+						<div class="col-4of12">
+							<h2>Contact Me</h2>
+							<p>Let's chat about anything from consulting your brand, to online presence, and design.</p>
+							<p><a href="mailto:sebastien@boldly.ca">sebastien@boldly.ca</a> (email)</p>
+							<p><a href="http://twitter.com/sebig">@sebig</a> (twitter)</p>
+							<div class="grid">
+							</div>
+						</div>
+						<div class="col-8of12">
+						</div>
+					</div>
+				</footer>
+				<hr>
+
+				<h2>Forms</h2>
+				<h3>Selector:</h3>
+				<code></code>
+				<h3>Sample code:</h3>
+				<pre><code></code></pre>
+				<h3>Rendered element:</h3>
+				<hr>
+
+				<h1>Typographic Sample</h1>
+				<p class="lead">Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis rem voluptatibus cum mollitia odit voluptas vero sequi delectus repellat, natus, alias consectetur, cumque explicabo quas architecto beatae dolore ea commodi reiciendis consequatur autem quisquam vel. Rem perspiciatis nam, officia quo? Laborum impedit quisquam ab deserunt, quos expedita. <a href="#">Consequuntur, reprehenderit.</a></p>
+				<img src="holder.js/500x300/">
+				<a href="#" class="btn btn-lg">Share this story</a>
+			</section>
+		</div>
+		<script src="{% static 'js/googlefonts.js' %}"></script>
+	</body>
+</html>

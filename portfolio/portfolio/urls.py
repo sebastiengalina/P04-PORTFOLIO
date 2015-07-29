@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^projects/(?P<slug>[^\s/]+)/$', 'portfolio.views.project', name="project"),
     url(r'^tagged/(?P<slug>[^//]+)/$', 'portfolio.views.tag', name="tag"),
     url(r'^about/$', 'portfolio.views.about', name="about"),
+    url(r'^styleguide.html$', 'portfolio.views.styleguide', name="styleguide"),
     url(r'^admin/', include(admin.site.urls)),
 ]
 

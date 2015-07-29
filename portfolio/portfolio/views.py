@@ -46,3 +46,10 @@ def about(request):
     t = loader.get_template("about.html")
     c = RequestContext(request, data)
     return HttpResponse(t.render(c))
+
+
+def styleguide(request):
+    data = {}
+    t = loader.get_template("styleguide.html")
+    c = RequestContext(request, data)
+    return HttpResponse(t.render(c))

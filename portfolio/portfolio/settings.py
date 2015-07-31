@@ -122,4 +122,4 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = "/home/boldly/sebastien.boldly.ca/public/static"
+MEDIA_ROOT = "/home/boldly/sebastien.boldly.ca/public/media"

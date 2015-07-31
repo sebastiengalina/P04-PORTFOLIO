@@ -25,7 +25,9 @@ SECRET_KEY = 'e3nyc_(a@=9%roe+j9o1^^me@tg&_r*m0jwh9pll%%0-nig$&n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "sebastien.boldly.ca"
+]
 SITE_ID = 1
 
 

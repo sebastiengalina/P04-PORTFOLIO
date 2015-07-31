@@ -8,8 +8,8 @@
 <div class="header-well">
 	{{ block.super }}
 	<picture>
-		<source media="(min-width:60em)" srcset="{% static 'img/deloitte-05.png' %}">
-		<source media="(min-width:45em)" srcset="{% static 'img/deloitte-05-med.png' %}">
+		<source media="(min-width:50em)" srcset="{% static 'img/deloitte-05.png' %}">
+		<source media="(min-width:30em)" srcset="{% static 'img/deloitte-05-med.png' %}">
 		<source media="(min-width: 0em)" srcset="{% static 'img/deloitte-05-small.png' %}">
 		<img class="header-image" src="{% static 'img/deloitte-05.png' %}"
 			alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
@@ -17,7 +17,7 @@
 	<section class="header-feature">
 		<h2>Sebastien Galina</h2>
 		<p class="lead">Web Designer, Backend Developer and Digital Art Director</p>
-		<a class="btn btn-lg btn-rev" href="#project-snippets">Check out my work <span class="fa fa-long-arrow-right"></span></a>
+		<a class="btn btn-lg btn-rev" href="#project-snippets">Check out my work</a>
 	</section>
 </div>
 {% endblock header %}
@@ -28,7 +28,7 @@
 		{% for p in projects|slice:":2" %}
 		<div class="col-6of12">
 			<div class="project-snippet">
-				<h3>{{ p.name }}</h3>
+				<h2>{{ p.name }}</h2>
 				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}" title="View projects tagged as {{ t }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 				<a class="simple-link" href="{{ p.get_absolute_url }}" title="View {{ p.name }}">
 					<div class="layers">

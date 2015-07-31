@@ -5,7 +5,7 @@
 
 $red: #FF3300;
 $yellow: #FFFF00;
-$orange: #CCCC00;
+$orange: #FFCC98;
 $black: #333;
 $grey: #888;
 $lightgrey: #666;
@@ -45,12 +45,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 3.3em;
 	margin: 0;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 2.5em;
+	font-weight: lighter;
 }
 
 h3 {
@@ -65,7 +66,8 @@ p {
 }
 
 p.lead {
-	font-size: 1.5em;
+	font-size: 1.85em;
+	color: $black;
 	margin: 0;
 	padding: 0;
 }
@@ -98,7 +100,7 @@ a:hover {
 }
 
 p a {
-	border-color: $lightergrey;
+	border-color: $orange;
 }
 
 a.simple-link {
@@ -121,7 +123,8 @@ ul.list li, ol.list li {
 .btn {
 	display: inline-block;
 	padding: 0.5em 1em;
-	border: 0.15em $orange solid;
+	color: $black;
+	border: 0.15em $yellow solid;
 	border-radius: 0.25em;
 	font-weight: bold;
 }
@@ -202,7 +205,7 @@ figure img {
 figcaption {
 	margin: 0;
 	padding: 0.25em;
-	background-color: $yellow;
+	background-color: $orange;
 }
 
 img {
@@ -234,6 +237,7 @@ img {
 
 	.brand {
 		margin: 0;
+		font-weight: bold;
 	}
 
 	.grid {
@@ -319,12 +323,13 @@ img {
 	margin: 0 auto;
 	padding-top: 4em;
 	border-bottom: 1rem $yellow solid;
-	opacity: 0.75;
+	opacity: 0.5;
 }
 
 .header-feature {
 	position: absolute;
 	padding: 1em;
+	padding-right: 2em;
 	width: 50%;
 	margin: 0 auto;
 	top: 32%;
@@ -332,6 +337,7 @@ img {
 
 	.btn {
 		margin-top: 1em;
+		color: $black !important;
 	}
 }
 
@@ -345,18 +351,22 @@ img {
 	border-top: thin #DDD solid;
 	@include transition(1s, 1s);
 
+	a {
+		color: $black;
+	}
+
 	p {
 		@include transition(1s, 1s);
 	}
 
 	&.active {
 		border-color: $yellow;
-		color: darken($orange, 30) !important;
-		background-color: lighten($orange, 20);
+		color: #FFF !important;
+		background-color: darken($orange, 20);
 		@include transition(0.25s, 0.5s);
 
 		p {
-			color: darken($orange, 30) !important;
+			color: #FFF !important;
 			@include transition(0.25s, 0.5s);
 		}
 	}
@@ -396,6 +406,10 @@ img {
 			border: thin #EEE solid;
 			margin: 0.5rem auto;
 			height: auto;
+		}
+
+		p.lead {
+			font-size: 1.5em;
 		}
 
 		a.simple-link {
@@ -470,6 +484,30 @@ img {
 
 	h2, h3, h4, p {
 		text-align: left;
+	}
+
+	img {
+		-webkit-filter: grayscale(100%);
+		filter: gray; filter: grayscale(100%);
+		
+		@include transition(0.25s);
+
+		&:hover {
+			-webkit-filter: none;
+			filter: none;
+		};
+	}
+
+	figure {
+		figcaption {
+			background-color: $lightergrey;
+			@include transition(0.25s);
+		}
+		&:hover {
+			figcaption {
+				background-color: $orange;
+			};
+		}
 	}
 }
 

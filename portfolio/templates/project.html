@@ -57,9 +57,11 @@
 {% endblock body.content.main %}
 
 {% block footer %}
+{% comment %}
 <div class="project-love">
 	<h3>Show this project some love!</h3>
 	<a class="btn btn-alt btn-love" href="?like=1"><span class="fa fa-heart"></span> I like this project</a>
 </div>
+{% endcomment %}
 {{ block.super }}
 {% endblock footer %}

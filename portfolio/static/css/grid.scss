@@ -69,15 +69,20 @@
 @media(max-width: 54em) {
 	.header-feature {
 		top: 25%;
+		font-size: 90%;
+	}
+
+	.header-feature .btn.btn-lg {
 	}
 }
 
 @media(max-width: 45em) {
 	.header-feature {
+		font-size: 80%;
 	}
 
 	.header-feature .btn.btn-lg {
-		font-size: 100%;
+		font-size: 1.2em;
 	}
 	#menu .button-grid {
 		text-align: right;
@@ -116,11 +121,8 @@
 }
 
 @media(max-width: 41.25em) {
-	.header-feature h2 {
-		font-size: 1.5em;
-	}
-	.header-feature p {
-		font-size: 1.1em;
+	.header-feature {
+		font-size: 70%;
 	}
 
 	.project-snippets .col-6of12 {
@@ -128,7 +130,7 @@
 	}
 }
 
-@media(max-width: 32em) {
+@media(max-width: 35em) {
 	.header-feature {
 		width: 100%;
 		text-align: center;

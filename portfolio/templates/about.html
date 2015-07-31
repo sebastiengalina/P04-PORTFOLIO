@@ -1,10 +1,10 @@
 {% extends "base_onecolumn.html" %}
 {% load staticfiles %}
 
-{% block title %}{{ flatpage.title }}{% endblock title %}
+{% block title %}My Story | {{ block.super }}{% endblock title %}
 
 {% block body.content.main %}
-<header id="page-header" role="heading">
+<header id="page-header">
 	<h1>Sebastien Galina</h1>
 	<p class="lead">Web Designer, Backend Developer, and Digital Art Director since 2009</p>
 	<p>I work with HTML5, CSS3, Django, Python, Apache, Linux, and JQuery to build small sites and big sites.  I have experience with database design, scalable cloud systems like Amazon Web Services, and frontend design.  I've posted <a href="{% url 'styleguide' %}">my website's style guide</a> online, and the rest of <a href="https://github.com/sebastiengalina/P04-PORTFOLIO">the codebase</a> as well.</p>
@@ -12,7 +12,7 @@
 	<hr class="alt">
 </header>
 
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -30,9 +30,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -50,9 +50,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -70,9 +70,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -90,9 +90,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -110,6 +110,6 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 {% endblock body.content.main %}

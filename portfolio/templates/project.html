@@ -4,7 +4,7 @@
 {% block title %}{{ project.name }} | {{ block.super }}{% endblock title %}
 
 {% block body.content.main %}
-<section id="page-header">
+<header id="page-header">
 	{% if liked %}
 	<div class="alert alert-liked">
 		<p><span class="fa fa-heart"></span> Thanks for showing some love!</p>
@@ -17,10 +17,10 @@
 		{{ project.short }}
 	</p>
 	<hr class="alt">
-</section>
+</header>
 
 {% for block in project.blocks.all %}
-<div class="project-block">
+<section class="project-block">
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 {% endfor %}
 
 {% endblock body.content.main %}

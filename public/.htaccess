@@ -1,0 +1,54 @@
+ExpiresActive on
+ExpiresDefault "access plus 24 hours"
+ExpiresByType image/gif "access plus 1 weeks"
+ExpiresByType image/png "access plus 1 weeks"
+ExpiresByType image/jpeg "access plus 1 weeks"
+ExpiresByType image/x-icon "access plus 1 weeks"
+ExpiresByType image/svg+xml "access plus 1 weeks"
+ExpiresByType application/json "access plus 1 weeks"
+ExpiresByType application/x-javascript "access plus 1 weeks"
+ExpiresByType application/javascript "access plus 1 weeks"
+ExpiresByType application/octet-stream "access plus 1 weeks"
+ExpiresByType application/x-font-ttf "access plus 1 weeks"
+ExpiresByType application/x-font-woff "access plus 1 weeks"
+ExpiresByType text/css "access plus 1 weeks"
+
+Header unset Pragma
+FileETag None
+Header unset ETag
+
+SetEnv SITE_WEBMASTER "Sebastien Galina"
+SetEnv SITE_WEBMASTER_URI mailto:sebastien@boldly.ca
+
+Options -Indexes
+
+# Prevent hotlinking
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{REQUEST_URI} !^/(admin/).* [NC]
+#RewriteCond %{HTTP_REFERER} !^https?://.*\.boldly.ca/.*$ [NC]
+#RewriteRule \.(ico|pdf|flv|jpg|jpeg|mp3|mpg|mp4|mov|wav|wmv|gif|swf|css|js)$ - [F,NS,L]
+
+SetEnv TZ America/Vancouver
+
+# Limit to 15MB uploads
+LimitRequestBody 15730000000
+
+#RewriteEngine On
+### If using a .htaccess file, uncomment the following line
+#Options +FollowSymLinks
+
+### If the Host header is not correctly set
+#RequestHeader set Host "api.seo4ajax.com"
+
+### If a bot requests an escaped URL then proxify the request to SEO4Ajax
+#RewriteCond %{QUERY_STRING}  _escaped_fragment_=  [NC]
+#RewriteRule ^(.*)$ http://api.seo4ajax.com/afef95737190dbc4b529eed5b97b804e/$1 [P,QSA,L]
+
+
+#<IfModule mod_proxy_http.c>
+#    RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest [NC,OR]
+#    RewriteCond %{QUERY_STRING} _escaped_fragment_
+
+#    # Only proxy the request to Prerender if it's a request for HTML
+#    RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(.*) http://boldly-prerender-2.herokuapp.com/http://boldly.ca/$2 [P,L]
+#</IfModule>

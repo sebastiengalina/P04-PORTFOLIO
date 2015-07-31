@@ -14,11 +14,11 @@
 		<img class="header-image" src="{% static 'img/deloitte-05.png' %}"
 			alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
 	</picture>
-	<div class="header-feature" role="heading">
+	<section class="header-feature">
 		<h2>Sebastien Galina</h2>
 		<p class="lead">Web Designer, Backend Developer and Digital Art Director</p>
 		<a class="btn btn-lg btn-rev" href="#project-snippets">Check out my work <span class="fa fa-long-arrow-right"></span></a>
-	</div>
+	</section>
 </div>
 {% endblock header %}
 
@@ -29,8 +29,8 @@
 		<div class="col-6of12">
 			<div class="project-snippet">
 				<h3>{{ p.name }}</h3>
-				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-				<a class="simple-link" href="{{ p.get_absolute_url }}" title="{{ p.name }}">
+				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}" title="View projects tagged as {{ t }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+				<a class="simple-link" href="{{ p.get_absolute_url }}" title="View {{ p.name }}">
 					<div class="layers">
 						<picture>
 							{% thumbnail p.logo "800x450" crop="top" format="PNG" as im %}
@@ -57,12 +57,13 @@
 					</div>
 				</a>
 				<p class="lead">{{ p.short|truncatewords:20 }}</p>
-				<a class="btn" href="{{ p.get_absolute_url }}">{{ p.readmore }} <span class="fa fa-long-arrow-right"></span></a>
+				<a class="btn" href="{{ p.get_absolute_url }}" title="View {{ p.name }}">{{ p.readmore }} <span class="fa fa-long-arrow-right"></span></a>
 			</div>
 		</div>
 		{% endfor %}
 	</div>
 
+	{% comment %}
 	<!--
 	<div class="grid">
 		<div class="col-4of12">
@@ -88,6 +89,7 @@
 		</div>
 	</div>
 	-->
+	{% endcomment %}
 
 </div>
 {% endblock body.content.main %}

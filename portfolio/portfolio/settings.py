@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import socket
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,10 +24,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e3nyc_(a@=9%roe+j9o1^^me@tg&_r*m0jwh9pll%%0-nig$&n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if socket.gethostname() == 'ps212027':
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = [
-    "sebastien.boldly.ca"
+    "sebastien.boldly.ca",
+    "sebastien.boldly.ca:80",
+    ".boldly.ca"
+    ".boldly.ca:80",
 ]
 SITE_ID = 1
 
@@ -116,10 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/home/boldly/sebastien.boldly.ca/public/static"
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "public/static")
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = "/home/boldly/sebastien.boldly.ca/public/media"
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "public/media")

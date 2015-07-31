@@ -1,8 +1,6 @@
 Move the tools to a different spot (it gets scrolled past)
 Add tools to project detail page?
 
-GZip
 Critical CSS embedded
-Lazy loading fonts (fontface onload)
 Lazy-loading images
 webpagetest.org

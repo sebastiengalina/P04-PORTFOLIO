@@ -1,7 +1,12 @@
 {% extends "base_onecolumn.html" %}
+{% load staticfiles %}
 {% load thumbnail %}
 
 {% block title %}{{ project.name }} | {{ block.super }}{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'lightbox/css/lightbox.css' %}">
+{% endblock css %}
 
 {% block body.content.main %}
 <header id="page-header">
@@ -33,17 +38,19 @@
 		<div class="col-6of12 block-content">
 			<div class="project-block-content">
 				<figure>
-					<picture>
-						{% thumbnail block.image "700" upscale=false as im %}
-						<source media="(min-width:45em)" srcset="{{ im.url }}">
-						{% endthumbnail %}
-						{% thumbnail block.image "400" upscale=false as im %}
-						<source media="(min-width:0em)" srcset="{{ im.url }}">
-						{% endthumbnail %}
-						{% thumbnail block.image "700" upscale=false as im %}
-						<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
-						{% endthumbnail %}
-					</picture>
+					<a class="simple-link" href="{{ block.image.url }}" data-lightbox="{{ project.name }}" data-title="{{ block.caption }}">
+							<picture>
+								{% thumbnail block.image "700" upscale=false as im %}
+								<source media="(min-width:45em)" srcset="{{ im.url }}">
+								{% endthumbnail %}
+								{% thumbnail block.image "400" upscale=false as im %}
+								<source media="(min-width:0em)" srcset="{{ im.url }}">
+								{% endthumbnail %}
+								{% thumbnail block.image "700" upscale=false as im %}
+								<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
+								{% endthumbnail %}
+							</picture>
+					</a>
 					{% if block.caption %}
 					<figcaption>{{ block.caption }}</figcaption>
 					{% endif %}
@@ -65,3 +72,7 @@
 {% endcomment %}
 {{ block.super }}
 {% endblock footer %}
+
+{% block js %}
+<script src="{% static 'lightbox/js/lightbox.min.js' %}"></script>
+{% endblock js %}

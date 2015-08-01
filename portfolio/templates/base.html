@@ -8,6 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% block title %}Sebastien Galina{% endblock title %}</title>
 		<link rel="stylesheet" href="{% static 'css/combo.css' %}">
+		{% block css %}
+		{% endblock css %}
 		<!--[if IE]>
 		<link rel="stylehsheet" href="{% static 'css/ie.css' %}">
 		<![endif]-->
@@ -74,6 +76,8 @@
 		<script src="{% static 'js/scroll-link.js' %}"></script>
 		<script src="{% static 'js/dropdown.js' %}"></script>
 		<script src="{% static 'js/contact.js' %}"></script>
+		{% block js %}
+		{% endblock js %}
 		<script>
 			var cb = function() {
 			var l = document.createElement('link'); l.rel = 'stylesheet';

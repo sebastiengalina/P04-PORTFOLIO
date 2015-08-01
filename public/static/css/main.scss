@@ -238,6 +238,7 @@ img {
 	.brand {
 		margin: 0;
 		font-weight: bold;
+		font-size: 2.2em;
 	}
 
 	.grid {
@@ -406,6 +407,10 @@ img {
 			border: thin #EEE solid;
 			margin: 0.5rem auto;
 			height: auto;
+		}
+
+		p.lead {
+			font-size: 1.5em;
 		}
 
 		a.simple-link {

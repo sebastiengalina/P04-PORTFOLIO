@@ -23,7 +23,7 @@
 			<div class="project-block-content">
 				<h2 class="whisper">{{ project.date.year }}</h2>
 				<p class="lead">Also tagged in {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-				<a href="{{ project.get_absolute_url }}">
+				<a class="simple-link" href="{{ project.get_absolute_url }}">
 					<div class="grid tagged-grid">
 						<div class="col-6of12">
 							{% thumbnail project.logo "400x300" crop="center" format="PNG" as im %}

@@ -5,8 +5,8 @@
 {% block title %}Sebastien Galina{% endblock title %}
 
 {% block header %}
+{{ block.super }}
 <div class="header-well">
-	{{ block.super }}
 	<picture>
 		<source media="(min-width:50em)" srcset="{% static 'img/deloitte-05.png' %}">
 		<source media="(min-width:30em)" srcset="{% static 'img/deloitte-05-med.png' %}">

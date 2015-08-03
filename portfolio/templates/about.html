@@ -3,6 +3,10 @@
 
 {% block title %}My Story | {{ block.super }}{% endblock title %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'lightbox/css/lightbox.css' %}">
+{% endblock css %}
+
 {% block body.content.main %}
 <header id="page-header">
 	<h1>Sebastien Galina</h1>
@@ -24,8 +28,10 @@
 			<div class="project-block-content">
 				<h2 class="whisper">2015</h2>
 				<figure>
-					<img src="{% static 'img/baristacats-01.png' %}" alt="Graphic design and art direction for fictional coffee company" width="1200" height="800">
-					<figcaption>Art direction for fictional coffee house Baristacats</figcaption>
+					<a class="simple-link" href="{% static 'img/baristacats-01.png' %}" data-lightbox="about">
+						<img src="{% static 'img/baristacats-01.png' %}" alt="Graphic design and art direction for fictional coffee company" width="1200" height="800">
+						<figcaption>Art direction for fictional coffee house Baristacats</figcaption>
+					</a>
 				</figure>
 			</div>
 		</div>
@@ -44,8 +50,10 @@
 			<div class="project-block-content">
 				<h2 class="whisper">2015</h2>
 				<figure>
-					<img src="{% static 'img/boldly-01.jpg' %}" width="800" height="378" alt="Boldly Creative Agency on set for Felix Cartal's Something To Live For">
-					<figcaption>Boldly Creative Agency, Inc. on set for Felix Cartal's music video with Nikki Yannofsky</figcaption>
+					<a class="simple-link" href="{% static 'img/boldly-01.jpg' %}" data-lightbox="about">
+						<img src="{% static 'img/boldly-01.jpg' %}" width="800" height="378" alt="Boldly Creative Agency on set for Felix Cartal's Something To Live For">
+						<figcaption>Boldly Creative Agency, Inc. on set for Felix Cartal's music video with Nikki Yannofsky</figcaption>
+					</a>
 				</figure>
 			</div>
 		</div>
@@ -64,8 +72,10 @@
 			<div class="project-block-content">
 				<h2 class="whisper">2013</h2>
 				<figure>
-					<img src="{% static 'img/exposure-01.png' %}" alt="Screenshot of Exposure Contest competitors page" width="800" height="378">
-					<figcaption>Screenshot from the Exposure Contest competitors, from the website I built with Django.</figcaption>
+					<a class="simple-link" href="{% static 'img/exposure-01.png' %}" data-lightbox="about">
+						<img src="{% static 'img/exposure-01.png' %}" alt="Screenshot of Exposure Contest competitors page" width="800" height="378">
+						<figcaption>Screenshot from the Exposure Contest competitors, from the website I built with Django.</figcaption>
+					</a>
 				</figure>
 			</div>
 		</div>
@@ -84,8 +94,10 @@
 			<div class="project-block-content">
 				<h2 class="whisper">2012</h2>
 				<figure>
-					<img src="{% static 'img/pfw-01.jpg' %}" alt="Outside the Vancouver Prime Focus VFX offices where I worked for eight months as a software developer" width="1000" height="667">
-					<figcaption>Outside the Vancouver office for Prime Focus VFX where I worked for eight months.</figcaption>
+					<a class="simple-link" href="{% static 'img/pfw-01.jpg' %}" data-lightbox="about">
+						<img src="{% static 'img/pfw-01.jpg' %}" alt="Outside the Vancouver Prime Focus VFX offices where I worked for eight months as a software developer" width="1000" height="667">
+						<figcaption>Outside the Vancouver office for Prime Focus VFX where I worked for eight months.</figcaption>
+					</a>
 				</figure>
 			</div>
 		</div>
@@ -104,8 +116,10 @@
 			<div class="project-block-content">
 				<h2 class="whisper">2006</h2>
 				<figure>
-					<img src="{% static 'img/chasse-02.png' %}" alt="Stills from La Chasse Galerie, a short film I made in French class" width="800" height="533">
-					<figcaption>Stills from an old LEGO movie I made in French class</figcaption>
+					<a class="simple-link" href="{% static 'img/chasse-02.png' %}" data-lightbox="about">
+						<img src="{% static 'img/chasse-02.png' %}" alt="Stills from La Chasse Galerie, a short film I made in French class" width="800" height="533">
+						<figcaption>Stills from an old LEGO movie I made in French class</figcaption>
+					</a>
 				</figure>
 			</div>
 		</div>
@@ -113,3 +127,7 @@
 </section>
 
 {% endblock body.content.main %}
+
+{% block js %}
+<script src="{% static 'lightbox/js/lightbox.min.js' %}"></script>
+{% endblock js %}

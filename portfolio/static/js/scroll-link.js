@@ -1,3 +1,5 @@
+/* Adapted from https://css-tricks.com/snippets/jquery/smooth-scrolling/ */
+
 $(document).ready(function() {
     $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 

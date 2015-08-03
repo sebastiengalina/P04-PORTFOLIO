@@ -120,9 +120,22 @@
 	}
 }
 
-@media(max-width: 41.25em) {
+@media(max-width: 41.5em) {
 	.header-feature {
-		font-size: 70%;
+		font-size: 80%;
+		top: 15%;
+	}
+}
+
+@media(max-width: 41.25em) {
+	h1 {
+		font-size: 2.25em;
+	}
+	p.lead {
+		font-size: 1.5em;
+	}
+	p {
+		line-height: 1.4em;
 	}
 
 	.project-snippets .col-6of12 {
@@ -134,5 +147,7 @@
 	.header-feature {
 		width: 100%;
 		text-align: center;
+		font-size: 90%;
+		padding: 2em;
 	}
 }

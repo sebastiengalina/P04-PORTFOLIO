@@ -1,11 +1,7 @@
-Move the tools to a different spot (it gets scrolled past)
 Add tools to project detail page?
 
 Critical CSS embedded
 Lazy-loading images
 webpagetest.org
-lightbox for project pages?
-fade/load page content with javascript (progressive enhance)
-media images not being uploaded to the right place?
 
 link to styleguide in footer

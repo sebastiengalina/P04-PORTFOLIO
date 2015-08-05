@@ -56,14 +56,22 @@
 		<footer id="footer-main">
 			{% block footer %}
 			<div class="grid">
-				<div class="col-4of12">
-					<h2>Contact Sebastien</h2>
-					<p>Let's chat about anything from consulting your brand, to online presence, and design.</p>
-					<p><a href="mailto:sebastien@boldly.ca" title="Email Sebastien">sebastien@boldly.ca</a> (email)</p>
-					<p><a href="http://twitter.com/sebig" title="Tweet to Sebastien">@sebig</a> (twitter)</p>
-					<p><a href="{% url 'styleguide' %}">S/tyle G/uide</a></p>
+				<div class="col-6of12">
+					<section id="contact">
+						<h2>Contact Sebastien</h2>
+						<p class="lead">Let's chat about anything</p>
+						<p>from consulting your brand, to online presence, and design.</p>
+						<p><a href="mailto:sebastien@boldly.ca" title="Email Sebastien">sebastien@boldly.ca</a> (email)</p>
+						<p><a href="http://twitter.com/sebig" title="Tweet to Sebastien">@sebig</a> (twitter)</p>
+						<p><a href="{% url 'styleguide' %}">S/tyle G/uide</a></p>
+					</section>
 				</div>
-				<div class="col-8of12">
+				<div class="col-6of12">
+					<section id="status">
+						<h2>Current Status</h2>
+						<p class="lead">The door is open</p>
+						<p>I'm open to new work in the field of Web Design or Digital Art Direction, whether you're a capital-A Agency, or a startup looking for an invested partner at the ground floor.</p>
+					</section>
 				</div>
 			</div>
 			{% endblock footer %}
@@ -76,6 +84,7 @@
 		<script src="{% static 'js/scroll-link.js' %}"></script>
 		<script src="{% static 'js/dropdown.js' %}"></script>
 		<script src="{% static 'js/contact.js' %}"></script>
+		<script src="{% static 'js/modernizr.js' %}"></script>
 		{% block js %}
 		{% endblock js %}
 		<script>

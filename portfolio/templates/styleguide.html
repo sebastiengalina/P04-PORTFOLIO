@@ -13,6 +13,7 @@
 		<![endif]-->
 		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
 		<link rel="stylesheet" href="{% static 'css/guide.css' %}">
+		<link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
 		<link rel="stylesheet" href="{% static 'fonts/untitled-font-1/untitled-font-1.css' %}">
 		<link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon"/>
 		<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon"/>
@@ -140,33 +141,21 @@
 				</figure>
 				<hr>
 
-				<h2>Icons</h2>
+				<h2>Icons (by FontAwesome)</h2>
 				<h3>Selector:</h3>
-				<code>.icon</code>
+				<code>.fa .fa-[name-of-icon]</code>
 				<h3>Sample code:</h3>
-				<pre><code>&lt;span class="icon"&gt;a&lt;/span&gt;</code></pre>
-				<pre><code>&lt;span class="icon"&gt;b&lt;/span&gt;</code></pre>
-				<pre><code>&lt;span class="icon"&gt;c&lt;/span&gt;</code></pre>
-				<pre><code>&lt;span class="icon"&gt;d&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="fa fa-angle-down"&gt;&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="fa fa-long-arrow-right"&gt;&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="fa fa-heart"&gt;&lt;/span&gt;</code></pre>
+				<pre><code>&lt;span class="fa fa-edit"&gt;&lt;/span&gt;</code></pre>
 				<h3>Rendered element:</h3>
 				<table>
 					<tr>
-						<td><span class="icon">a</span></td>
-						<td><span class="icon">b</span></td>
-						<td><span class="icon">c</span></td>
-						<td><span class="icon">d</span></td>
-					</tr>
-					<tr>
-						<td><span class="icon">e</span></td>
-						<td><span class="icon">f</span></td>
-						<td><span class="icon">g</span></td>
-						<td><span class="icon">h</span></td>
-					</tr>
-					<tr>
-						<td><span class="icon">i</span></td>
-						<td><span class="icon">j</span></td>
-						<td><span class="icon">k</span></td>
-						<td><span class="icon">l</span></td>
+						<td><span class="fa fa-angle-down fa-2x"></span></td>
+						<td><span class="fa fa-long-arrow-right fa-2x"></span></td>
+						<td><span class="fa fa-heart fa-2x"></span></td>
+						<td><span class="fa fa-edit fa-2x"></span></td>
 					</tr>
 				</table>
 				<hr>
@@ -289,9 +278,9 @@
 						
 						<div class="col-6of12">
 							<div class="project-snippet">
-								<h3>Beach House Theatre</h3>
-								<p>Tagged in: <a href="/tagged/website/">Website</a>, <a href="/tagged/design/">Design</a>, <a href="/tagged/theatre/">Theatre</a></p>
-								<a class="simple-link" href="/projects/beachhousetheatre/" title="Beach House Theatre">
+								<h2>Beach House Theatre</h2>
+								<p>Tagged in: <a href="/tagged/website/" title="View projects tagged as Website">Website</a>, <a href="/tagged/design/" title="View projects tagged as Design">Design</a>, <a href="/tagged/theatre/" title="View projects tagged as Theatre">Theatre</a></p>
+								<a class="simple-link" href="/projects/beachhousetheatre/" title="View Beach House Theatre">
 									<div class="layers">
 										<picture>
 											<source media="(min-width:45em)" srcset="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png">
@@ -299,14 +288,14 @@
 											<img class="top-layer" src="/media/cache/dc/ab/dcab4f722b7ecec49b8dd122f70995bc.png" width="800" height="450" alt="Beach House Theatre logo">
 										</picture>
 										<picture>
-											<source media="(min-width:45em)" srcset="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png">
-											<source media="(min-width:0em)" srcset="/media/cache/e9/73/e9737964ef23ae47a2a075adfae4a403.png">							
-											<img class="bottom-layer" src="/media/cache/be/46/be46562d0309a26ca93843be5a6f11e4.png" width="800" height="450" alt="Beach House Theatre style">
+											<source media="(min-width:45em)" srcset="/media/cache/ef/11/ef11bcecb4b2d313936c43686f168340.png">
+											<source media="(min-width:0em)" srcset="/media/cache/8f/d7/8fd7eb2bdb0bba426004b6a759a4cd21.png">							
+											<img class="bottom-layer" src="/media/cache/ef/11/ef11bcecb4b2d313936c43686f168340.png" width="800" height="450" alt="Beach House Theatre style">
 										</picture>
 									</div>
 								</a>
 								<p class="lead">Achieving user goals and company goals meant a complete rebuild from the ground up. We started with Information Architecture to ...</p>
-								<a class="btn" href="/projects/beachhousetheatre/">Go under the stars <span class="fa fa-long-arrow-right"></span></a>
+								<a class="btn" href="/projects/beachhousetheatre/" title="View Beach House Theatre">Go under the stars <span class="fa fa-long-arrow-right"></span></a>
 							</div>
 						</div>
 					

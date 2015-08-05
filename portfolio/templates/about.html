@@ -7,16 +7,36 @@
 <link rel="stylesheet" href="{% static 'lightbox/css/lightbox.css' %}">
 {% endblock css %}
 
-{% block body.content.main %}
-<header id="page-header">
-	<h1>Sebastien Galina</h1>
-	<p class="lead">Web Designer, Backend Developer, and Digital Art Director since 2009</p>
-	<p>I work with HTML5, CSS3, Django, Python, Apache, Linux, and JQuery to build small sites and big sites.  I have experience with database design, scalable cloud systems like Amazon Web Services, and frontend design.  I've posted <a href="{% url 'styleguide' %}">my website's style guide</a> online, and the rest of <a href="https://github.com/sebastiengalina/P04-PORTFOLIO">the codebase</a> as well.</p>
-	<p>In my spare time, I work on film and photography projects for big brands such as The City of Surrey, Richmond, Universal Music, and Coast Capital Savings.</p>
-	<hr class="alt">
-</header>
+{% block header %}
+{{ block.super }}
+<div class="header-well">
+	<picture>
+		<source media="(min-width:50em)" srcset="{% static 'img/seb-01.jpg' %}">
+		<source media="(min-width:30em)" srcset="{% static 'img/deloitte-05-med.png' %}">
+		<source media="(min-width: 0em)" srcset="{% static 'img/deloitte-05-small.png' %}">
+		<img class="header-image" src="{% static 'img/seb-01.jpg' %}"
+			alt="Sebastien Galina, Web Designer, Backend Developer and Digital Art Director">
+	</picture>
+	<section class="header-feature">
+		<h2>About Sebastien</h2>
+		<p class="lead">A student, entrepreneur, and a builder.</p>
+		<a class="btn btn-lg btn-rev" href="#about">Read my story</a>
+	</section>
+</div>
+{% endblock header %}
 
-<section class="project-block">
+{% block body.content.main %}
+<section id="about" class="project-block">
+	<div class="grid">
+		<div class="col-6of12 block-text">
+			<div class="project-block-text">
+				<h1>Sebastien Galina</h1>
+				<p class="lead">Web Designer, Backend Developer, and Digital Art Director since 2009</p>
+				<p>I work with HTML5, CSS3, Django, Python, Apache, Linux, and JQuery to build small sites and big sites.  I have experience with database design, scalable cloud systems like Amazon Web Services, and frontend design.  I've posted <a href="{% url 'styleguide' %}">my website's style guide</a> online, and the rest of <a href="https://github.com/sebastiengalina/P04-PORTFOLIO">the codebase</a> as well.</p>
+				<p>In my spare time, I work on film and photography projects for big brands such as The City of Surrey, Richmond, Universal Music, and Coast Capital Savings.</p>
+			</div>
+		</div>
+	</div>
 	<div class="grid">
 		<div class="col-6of12 block-text">
 			<div class="project-block-text">

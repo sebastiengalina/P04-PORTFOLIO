@@ -59,10 +59,16 @@
 }
 
 
-@media(max-width: 65em) {
+@media(max-width: 65.625em) {
 	#menu > nav > .grid > .col-8of12,
 	#menu > nav > .grid > .col-4of12 {
 		width: 50%;
+	}
+}
+
+@media(max-width: 65em) {
+	.header-feature {
+		width: 60%;
 	}
 }
 
@@ -71,8 +77,8 @@
 		top: 25%;
 		font-size: 90%;
 	}
-
-	.header-feature .btn.btn-lg {
+	#footer-main .col-6of12 {
+		width: 100%;
 	}
 }
 
@@ -114,16 +120,11 @@
 	.project-block .col-6of12 {
 		width: 100%;
 	}
-
-	#footer-main .col-4of12 {
-		width: 100%;
-	}
 }
 
 @media(max-width: 41.5em) {
 	.header-feature {
 		font-size: 80%;
-		top: 15%;
 	}
 }
 
@@ -148,6 +149,7 @@
 		width: 100%;
 		text-align: center;
 		font-size: 90%;
+		top: 15%;
 		padding: 2em;
 	}
 }

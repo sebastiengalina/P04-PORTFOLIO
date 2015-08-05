@@ -377,6 +377,10 @@ img {
 	}
 }
 
+.footer-snippet {
+	padding: 1rem;
+}
+
 .project-block {
 	max-width: 80em;
 	margin: 0 auto;
@@ -405,6 +409,7 @@ img {
 		background-color: #FFF;
 		margin: 0.5em;
 		margin-bottom: 2em;
+		padding: 1rem;
 
 		@include transition(0.25s);
 

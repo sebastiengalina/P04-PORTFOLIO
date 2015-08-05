@@ -27,7 +27,7 @@
 	<div class="grid">
 		{% for p in projects|slice:":2" %}
 		<div class="col-6of12">
-			<div class="project-snippet">
+			<section class="project-snippet">
 				<h2>{{ p.name }}</h2>
 				<p>Tagged in: {% for t in p.tags.all %}<a href="{{ t.get_absolute_url }}" title="View projects tagged as {{ t }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 				<a class="simple-link" href="{{ p.get_absolute_url }}" title="View {{ p.name }}">
@@ -58,7 +58,7 @@
 				</a>
 				<p class="lead">{{ p.short|truncatewords:20 }}</p>
 				<a class="btn" href="{{ p.get_absolute_url }}" title="View {{ p.name }}">{{ p.readmore }} <span class="fa fa-long-arrow-right"></span></a>
-			</div>
+			</section>
 		</div>
 		{% endfor %}
 	</div>

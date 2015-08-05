@@ -106,6 +106,7 @@ p a {
 a.simple-link {
 	padding: 0;
 	margin: 0;
+	color: $black;
 }
 
 ul.list, ol.list {
@@ -347,7 +348,6 @@ img {
 }
 
 #wrap {
-	padding-top: 4em;
 }
 
 #footer-main {
@@ -377,6 +377,10 @@ img {
 	}
 }
 
+.footer-snippet {
+	padding: 1rem;
+}
+
 .project-block {
 	max-width: 80em;
 	margin: 0 auto;
@@ -386,6 +390,7 @@ img {
 	margin: 0 auto;
 	max-width: 80em;
 	padding: 2em 1rem;
+	padding-top: 6em;
 	background-color: #FFF;
 }
 
@@ -404,6 +409,7 @@ img {
 		background-color: #FFF;
 		margin: 0.5em;
 		margin-bottom: 2em;
+		padding: 1rem;
 
 		@include transition(0.25s);
 
@@ -455,17 +461,12 @@ img {
 
 .project-block {
 	margin-bottom: 0;
-}
-
-.project-block .block-content {
-	border-left: 3px #EEE solid;
 	background-color: #F7F7F7;
-
-	p.lead {
-		font-size: 1.5em;
-	}
 }
 
+.project-block .block-text {
+	background-color: #FFF;
+}
 
 .project-block-text,
 .project-block-content,
@@ -531,7 +532,7 @@ img {
 
 .project-block-content .tagged-grid {
 	img {
-		margin-bottom: 1rem;
+		margin: 0;
 	}
 	.col-3of12 img {
 		margin-top: 0;
@@ -546,4 +547,16 @@ img {
 	background-color: #F7F7F7;
 	text-align: center;
 
+}
+
+
+/* ------------------- MODERNIZR ------------------- */
+.flexbox .grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.flexbox [class^='col-'] {
+	float: none;	
 }

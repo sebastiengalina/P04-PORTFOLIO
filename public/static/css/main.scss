@@ -306,13 +306,18 @@ img {
 	visibility: visible;
 	opacity: 1;
 
-	background-color: lighten($orange, 10);
-	background-color: rgba(lighten($orange, 10), 0.95);
+	background-color: $orange;
+	background-color: rgba($orange, 0.95);
 	color: $black;
+	border-bottom: 0.5rem $black solid;
 
 	.btn {
 		font-size: 2em;
 		padding-right: 0.5em;
+
+		&:hover {
+			background-color: $yellow;
+		}
 
 		.fa {
 			display: inline-block;
@@ -347,7 +352,12 @@ img {
 	}
 }
 
-#wrap {
+main {
+	@include transition(0.25s);
+}
+
+main.dropdown {
+	opacity: 0.1;
 }
 
 #footer-main {

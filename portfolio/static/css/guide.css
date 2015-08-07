@@ -18,6 +18,7 @@ code {
 	display: block;
 	padding: 0.4em;
 	color: #888;
+	overflow-x: scroll;
 }
 
 .style-tile {

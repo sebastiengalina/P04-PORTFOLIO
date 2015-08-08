@@ -80,24 +80,14 @@
 		<script src="{% static 'js/html5shiv.min.js' %}"></script>
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
-		<script src="{% static 'js/googlefonts.js' %}"></script>
 		<script src="{% static 'js/scroll-link.js' %}"></script>
 		<script src="{% static 'js/dropdown.js' %}"></script>
 		<script src="{% static 'js/contact.js' %}"></script>
 		<script src="{% static 'js/modernizr.js' %}"></script>
+		<script src="{% static 'js/googlefonts.js' %}"></script>
+		<script src="{% static 'js/font-awesome.js' %}"></script>
 		{% block js %}
 		{% endblock js %}
-		<script>
-			var cb = function() {
-			var l = document.createElement('link'); l.rel = 'stylesheet';
-			l.href = "{% static 'fontawesome/css/font-awesome.min.css' %}";
-			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-			};
-			var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-			webkitRequestAnimationFrame || msRequestAnimationFrame;
-			if (raf) raf(cb);
-			else window.addEventListener('load', cb);
-		</script>
 
 	</body>
 

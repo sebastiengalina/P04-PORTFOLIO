@@ -20,9 +20,8 @@
 			</div>
 		</div>
 		<div class="col-6of12 block-content">
-			<div class="project-block-content">
+			<div class="project-block-content block-tagged">
 				<h2 class="whisper">{{ project.date.year }}</h2>
-				<p>Also tagged in {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 				<a class="simple-link" href="{{ project.get_absolute_url }}">
 					<div class="grid tagged-grid">
 						<div class="col-6of12">
@@ -36,16 +35,9 @@
 							{% endthumbnail %}
 						</div>
 					</div>
-					<div class="grid tagged-grid">
-						{% for block in project.blocks.all|slice:":4" %}
-						<div class="col-3of12">
-							{% thumbnail block.image "100x100" crop="center" as im %}
-							<img class="bordered" src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.heading }}">
-							{% endthumbnail %}
-						</div>
-						{% endfor %}
-					</div>
 				</a>
+				<p><small>Also tagged in {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</small></p>
+				<a class="btn" href="{{ project.get_absolute_url }}">{{ project.readmore }} <span class="fa fa-long-arrow-right"></span></a>
 			</div>
 		</div>
 	</div>

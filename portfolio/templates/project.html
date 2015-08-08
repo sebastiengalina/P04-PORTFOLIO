@@ -9,20 +9,30 @@
 {% endblock css %}
 
 {% block body.content.main %}
-<header id="page-header">
-	{% if liked %}
-	<div class="alert alert-liked">
-		<p><span class="fa fa-heart"></span> Thanks for showing some love!</p>
-	</div>
-	{% endif %}
-	<h1>{{ project.name }}</h1>
-	<p class="lead">{{ project.ptype }} by Sebastien Galina for {{ project.client }}<br>Tagged in: {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-	<p>
-		{{ project.short }}
-	</p>
-</header>
-
 <div class="project-blocks">
+	<section class="project-block">
+		<div class="grid">
+			<div class="col-6of12 block-text">
+				<div class="project-block-text">
+					<header id="page-header">
+						<h1>{{ project.name }}</h1>
+						<p class="lead">{{ project.ptype }} by Sebastien Galina for {{ project.client }}</p>
+						<p>Tagged in: {% for t in project.tags.all %}<a href="{{ t.get_absolute_url }}">{{ t }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+						<p>
+							{{ project.short }}
+						</p>
+					</header>
+				</div>
+			</div>
+			<div class="col-6of12 block-content">
+				<div class="project-block-content project-header-image">
+					{% thumbnail project.logo "700" upscale=false as im %}
+					<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" data-lightbox="{{ project.name }}" alt="{{ project.name }}">
+					{% endthumbnail %}
+				</div>
+			</div>
+		</div>
+	</section>
 	{% for block in project.blocks.all %}
 	<section class="project-block">
 		<div class="grid">
@@ -38,17 +48,17 @@
 				<div class="project-block-content">
 					<figure>
 						<a class="simple-link" href="{{ block.image.url }}" data-lightbox="{{ project.name }}" data-title="{{ block.caption }}">
-								<picture>
-									{% thumbnail block.image "700" upscale=false as im %}
-									<source media="(min-width:45em)" srcset="{{ im.url }}">
-									{% endthumbnail %}
-									{% thumbnail block.image "400" upscale=false as im %}
-									<source media="(min-width:0em)" srcset="{{ im.url }}">
-									{% endthumbnail %}
-									{% thumbnail block.image "700" upscale=false as im %}
-									<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}">
-									{% endthumbnail %}
-								</picture>
+							<picture>
+								{% thumbnail block.image "700" upscale=false as im %}
+								<source media="(min-width:45em)" srcset="{{ im.url }}">
+								{% endthumbnail %}
+								{% thumbnail block.image "400" upscale=false as im %}
+								<source media="(min-width:0em)" srcset="{{ im.url }}">
+								{% endthumbnail %}
+								{% thumbnail block.image "700" upscale=false as im %}
+								<img src="{{ im.url }}" width="{{ im.x }}" height="{{ im.y }}" alt="{{ block.tagline }}" class="grayscale">
+								{% endthumbnail %}
+							</picture>
 						</a>
 						{% if block.caption %}
 						<figcaption>{{ block.caption }}</figcaption>
